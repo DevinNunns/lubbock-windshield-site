@@ -1,0 +1,131 @@
+---
+import Layout from '../layouts/Layout.astro';
+import Header from '../components/Header.astro';
+import Footer from '../components/Footer.astro';
+import CallButton from '../components/CallButton.astro';
+
+const siteUrl = 'https://windshieldreplacementlubbock.com';
+
+const neighborhoods = [
+  { name: 'Tech Terrace', desc: 'Popular neighborhood near Texas Tech University, bounded roughly by University Avenue and 19th Street. Lots of students and faculty — we know the streets well.' },
+  { name: 'Heart of Lubbock', desc: 'Central Lubbock residential area. We serve all streets throughout this established neighborhood.' },
+  { name: 'Maxey Park', desc: 'Older residential neighborhood in east-central Lubbock. We\'re familiar with the area and can typically be there same-day.' },
+  { name: 'South Overton', desc: 'South-central Lubbock neighborhood, well-established community with a mix of homeowners and renters. We come right to your driveway.' },
+  { name: 'North Overton', desc: 'Established north Lubbock neighborhood. Quick response times throughout this area.' },
+  { name: 'Arnett Benson', desc: 'East Lubbock neighborhood. Full mobile service available — we come to you.' },
+  { name: 'Clapp Park', desc: 'Southeast Lubbock neighborhood, close to Loop 289. Easy for our technicians to reach.' },
+  { name: 'Stubbs-Stewart', desc: 'Historic central Lubbock neighborhood. We serve this area frequently.' },
+  { name: 'Bayless-Atkins', desc: 'West Lubbock area near the university district. Regular service zone for our mobile team.' },
+  { name: 'Wheelock & Monterey', desc: 'Southwest Lubbock, easily accessible from Loop 289. Same-day service available.' },
+];
+
+const towns = [
+  { name: 'Wolfforth', miles: '10 mi SW', desc: 'Fast-growing community just southwest of Lubbock on Highway 62. We serve Wolfforth residents with the same speed and quality as in-city customers.' },
+  { name: 'Shallowater', miles: '13 mi NW', desc: 'Small community northwest of Lubbock. We make regular service runs out to Shallowater for mobile windshield work.' },
+  { name: 'Idalou', miles: '12 mi E', desc: 'East of Lubbock off Highway 82. We cover Idalou for mobile service — call ahead so we can route our technician.' },
+  { name: 'Ransom Canyon', miles: '14 mi E', desc: 'Canyon community east of Lubbock. We serve Ransom Canyon, including the lake community areas.' },
+  { name: 'Slaton', miles: '25 mi SE', desc: 'Historic railroad town southeast on Highway 84. We serve Slaton — slightly longer drive for our tech but we make the run regularly.' },
+  { name: 'New Deal', miles: '15 mi N', desc: 'Small community north of Lubbock. We serve New Deal for mobile repairs and replacements.' },
+  { name: 'Abernathy', miles: '32 mi N', desc: 'Community north of Lubbock on Highway 87. We extend our service zone to cover Abernathy — call to confirm availability and timing.' },
+];
+---
+
+<Layout
+  title="Windshield Service Areas — Lubbock TX & Surrounding Towns"
+  description="We provide windshield replacement & repair across Lubbock, TX and surrounding communities including Wolfforth, Shallowater, Idalou & more. Call (806) 450-8900."
+  canonical={`${siteUrl}/service-areas`}
+>
+  <Header />
+
+  <section style="background-color: #1e3a8a;" class="text-white py-12 px-4">
+    <div class="max-w-4xl mx-auto">
+      <h1 class="text-3xl sm:text-4xl font-bold mb-3">Windshield Service Areas — Lubbock &amp; Surrounding Communities</h1>
+      <p class="text-blue-200 text-lg max-w-2xl">We cover all of Lubbock and extend our mobile service to nearby West Texas towns. If you're within about 30 miles of Lubbock, we've got you covered.</p>
+    </div>
+  </section>
+
+  <main class="max-w-4xl mx-auto px-4 py-12">
+
+    <div class="mb-10">
+      <CallButton label="Call to Confirm Service in Your Area: (806) 450-8900" size="md" />
+    </div>
+
+    <section class="mb-12">
+      <h2 class="text-2xl font-bold mb-6" style="color: #1e3a8a;">Lubbock Neighborhoods We Serve</h2>
+      <p class="text-gray-700 leading-relaxed mb-6">
+        Our mobile service covers every neighborhood in Lubbock. We're familiar with all the streets, know the traffic patterns on Loop 289, 50th Street, and 82nd Street, and can get to you quickly regardless of where you are in the city. Here are the neighborhoods we most frequently serve:
+      </p>
+      <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+        {neighborhoods.map(n => (
+          <div class="bg-gray-50 border border-gray-200 rounded-lg p-4">
+            <h3 class="font-bold mb-1" style="color: #1e3a8a;">{n.name}</h3>
+            <p class="text-gray-600 text-sm">{n.desc}</p>
+          </div>
+        ))}
+      </div>
+      <p class="text-gray-600 text-sm mt-4">Don't see your neighborhood listed? Don't worry — we serve all of Lubbock, not just these areas. Call us and we'll confirm we can reach you (we almost certainly can).</p>
+    </section>
+
+    <section class="mb-12">
+      <h2 class="text-2xl font-bold mb-6" style="color: #1e3a8a;">Nearby Towns We Serve</h2>
+      <p class="text-gray-700 leading-relaxed mb-6">
+        Our mobile service extends to several communities surrounding Lubbock. West Texas is wide open country, and plenty of people live in these smaller towns but work, shop, or deal with the same road conditions — gravel, hail, agricultural trucks — as Lubbock drivers.
+      </p>
+      <div class="space-y-4">
+        {towns.map(t => (
+          <div class="border border-gray-200 rounded-lg p-5">
+            <div class="flex items-start justify-between gap-4">
+              <div>
+                <h3 class="font-bold text-lg mb-1" style="color: #1e3a8a;">{t.name}</h3>
+                <p class="text-gray-600 text-sm">{t.desc}</p>
+              </div>
+              <span class="text-xs bg-blue-100 text-blue-800 px-2 py-1 rounded whitespace-nowrap">{t.miles}</span>
+            </div>
+          </div>
+        ))}
+      </div>
+    </section>
+
+    <section class="mb-12">
+      <h2 class="text-2xl font-bold mb-4" style="color: #1e3a8a;">Major Roads in Our Service Zone</h2>
+      <p class="text-gray-700 leading-relaxed mb-4">
+        Lubbock's road network is a big part of why windshield damage is so common here. The roads we travel most while serving customers — and the same roads that cause most of the damage we see — include:
+      </p>
+      <ul class="grid grid-cols-1 sm:grid-cols-2 gap-3 text-gray-700 text-sm">
+        <li class="flex gap-2"><span style="color: #dc2626;">&#8226;</span> <strong>Loop 289</strong> — Heavy commercial traffic all the way around Lubbock</li>
+        <li class="flex gap-2"><span style="color: #dc2626;">&#8226;</span> <strong>I-27</strong> — Lubbock to Amarillo, with lots of truck traffic</li>
+        <li class="flex gap-2"><span style="color: #dc2626;">&#8226;</span> <strong>Highway 87 / Avenue Q</strong> — Running north-south through the city and beyond</li>
+        <li class="flex gap-2"><span style="color: #dc2626;">&#8226;</span> <strong>50th Street</strong> — Major east-west commercial corridor</li>
+        <li class="flex gap-2"><span style="color: #dc2626;">&#8226;</span> <strong>82nd Street</strong> — Southern Lubbock commercial strip</li>
+        <li class="flex gap-2"><span style="color: #dc2626;">&#8226;</span> <strong>19th Street</strong> — University corridor and central Lubbock</li>
+        <li class="flex gap-2"><span style="color: #dc2626;">&#8226;</span> <strong>University Avenue</strong> — Main artery through the Tech campus area</li>
+        <li class="flex gap-2"><span style="color: #dc2626;">&#8226;</span> <strong>Highway 84</strong> — East toward Slaton and beyond</li>
+      </ul>
+    </section>
+
+    <section class="mb-12 bg-gray-50 rounded-xl p-8">
+      <h2 class="text-2xl font-bold mb-4" style="color: #1e3a8a;">Why West Texas Drivers Need Windshield Service More Than Most</h2>
+      <p class="text-gray-700 leading-relaxed mb-4">
+        It's no exaggeration to say that Lubbock and the surrounding South Plains area are among the toughest environments for auto glass in the country. Three main factors drive this:
+      </p>
+      <p class="text-gray-700 leading-relaxed mb-3">
+        <strong>Hail.</strong> Lubbock is squarely in the heart of hail country — part of Tornado Alley where the conditions that produce severe thunderstorms are common from spring through early summer. Large hail events can damage dozens of vehicles in a single storm.
+      </p>
+      <p class="text-gray-700 leading-relaxed mb-3">
+        <strong>Agricultural traffic.</strong> The West Texas economy is heavily agricultural. Trucks hauling cotton modules, grain, and farming equipment travel the highways and county roads constantly. These trucks shed gravel and debris at highway speeds — and your windshield is in the way.
+      </p>
+      <p class="text-gray-700 leading-relaxed">
+        <strong>Wind and blowing debris.</strong> Lubbock's famous wind keeps small rocks, gravel, and grit in motion year-round. Dust storms — haboobs — can pick up and fling debris that chips glass. It's a constant reality of living and driving on the South Plains.
+      </p>
+    </section>
+
+    <div class="text-center py-10 bg-blue-50 rounded-xl border border-blue-100">
+      <h2 class="text-2xl font-bold mb-3" style="color: #1e3a8a;">We Serve Your Area — Call to Confirm</h2>
+      <p class="text-gray-600 mb-5 max-w-xl mx-auto">Call and tell us where you are. We'll confirm we can reach you, give you a quote, and schedule same-day service whenever possible.</p>
+      <CallButton label="Call (806) 450-8900 — Free Quote" size="lg" center={true} />
+    </div>
+
+  </main>
+
+  <Footer />
+</Layout>

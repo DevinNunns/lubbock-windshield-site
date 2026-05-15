@@ -1,0 +1,82 @@
+---
+import '../styles/global.css';
+
+interface Props {
+  title: string;
+  description: string;
+  canonical: string;
+  ogTitle?: string;
+  ogDescription?: string;
+  ogUrl?: string;
+  includeJsonLd?: boolean;
+}
+
+const {
+  title,
+  description,
+  canonical,
+  ogTitle,
+  ogDescription,
+  ogUrl,
+  includeJsonLd = false,
+} = Astro.props;
+
+const siteUrl = 'https://windshieldreplacementlubbock.com';
+const resolvedOgTitle = ogTitle || title;
+const resolvedOgDescription = ogDescription || description;
+const resolvedOgUrl = ogUrl || canonical;
+
+const jsonLd = {
+  "@context": "https://schema.org",
+  "@type": "AutoGlassRepair",
+  "name": "Lubbock Windshield Replacement",
+  "image": `${siteUrl}/og-image.jpg`,
+  "telephone": "+18064508900",
+  "url": siteUrl,
+  "address": {
+    "@type": "PostalAddress",
+    "addressLocality": "Lubbock",
+    "addressRegion": "TX",
+    "postalCode": "79401",
+    "addressCountry": "US"
+  },
+  "areaServed": [
+    {"@type": "City", "name": "Lubbock"},
+    {"@type": "City", "name": "Wolfforth"},
+    {"@type": "City", "name": "Shallowater"},
+    {"@type": "City", "name": "Idalou"},
+    {"@type": "City", "name": "Slaton"}
+  ],
+  "priceRange": "$",
+  "openingHoursSpecification": {
+    "@type": "OpeningHoursSpecification",
+    "dayOfWeek": ["Monday","Tuesday","Wednesday","Thursday","Friday","Saturday","Sunday"],
+    "opens": "00:00",
+    "closes": "23:59"
+  }
+};
+---
+
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>{title}</title>
+    <meta name="description" content={description} />
+    <link rel="canonical" href={canonical} />
+    <meta property="og:title" content={resolvedOgTitle} />
+    <meta property="og:description" content={resolvedOgDescription} />
+    <meta property="og:url" content={resolvedOgUrl} />
+    <meta property="og:type" content="website" />
+    <meta property="og:image" content={`${siteUrl}/og-image.jpg`} />
+    <meta name="robots" content="index, follow" />
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    {includeJsonLd && (
+      <script type="application/ld+json" set:html={JSON.stringify(jsonLd)} />
+    )}
+  </head>
+  <body class="bg-white text-gray-900 font-sans">
+    <slot />
+  </body>
+</html>

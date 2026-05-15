@@ -1,0 +1,62 @@
+---
+import Layout from '../layouts/Layout.astro';
+import Header from '../components/Header.astro';
+import Footer from '../components/Footer.astro';
+import CallButton from '../components/CallButton.astro';
+
+const siteUrl = 'https://windshieldreplacementlubbock.com';
+---
+
+<Layout
+  title="Windshield Tips & Auto Glass Blog | Lubbock TX"
+  description="Auto glass tips, windshield maintenance advice, and Lubbock-specific guidance for West Texas drivers. Serving Lubbock, TX — call (806) 450-8900."
+  canonical={`${siteUrl}/blog`}
+>
+  <Header />
+
+  <section style="background-color: #1e3a8a;" class="text-white py-12 px-4">
+    <div class="max-w-4xl mx-auto">
+      <h1 class="text-3xl sm:text-4xl font-bold mb-3">Auto Glass Tips &amp; Lubbock Windshield Guide</h1>
+      <p class="text-blue-200 text-lg max-w-2xl">Helpful articles about windshield care, insurance, and what West Texas drivers need to know about keeping their auto glass in good shape.</p>
+    </div>
+  </section>
+
+  <main class="max-w-4xl mx-auto px-4 py-12">
+
+    <div class="mb-10 p-6 bg-blue-50 border border-blue-200 rounded-xl text-center">
+      <p class="text-gray-700 mb-2">Have a windshield issue right now? Skip the reading and give us a call.</p>
+      <CallButton label="Call (806) 450-8900 — Same-Day Service" size="md" center={true} />
+    </div>
+
+    <div class="text-center py-16 border-2 border-dashed border-gray-200 rounded-xl">
+      <div class="text-5xl mb-4">&#128221;</div>
+      <h2 class="text-xl font-bold mb-3 text-gray-700">Articles Coming Soon</h2>
+      <p class="text-gray-500 max-w-md mx-auto text-sm leading-relaxed">
+        We're working on helpful guides for Lubbock drivers — covering topics like how to handle hail season, when to repair vs. replace, how insurance glass claims work in Texas, and more. Check back soon.
+      </p>
+    </div>
+
+    <div class="mt-12 bg-gray-50 rounded-xl p-8">
+      <h2 class="text-xl font-bold mb-4" style="color: #1e3a8a;">Topics We'll Be Covering</h2>
+      <ul class="grid grid-cols-1 sm:grid-cols-2 gap-3 text-gray-700 text-sm">
+        <li class="flex gap-2"><span style="color: #1e3a8a;">&#8250;</span> How to survive Lubbock hail season with your windshield intact</li>
+        <li class="flex gap-2"><span style="color: #1e3a8a;">&#8250;</span> Chip vs. crack: what can actually be repaired?</li>
+        <li class="flex gap-2"><span style="color: #1e3a8a;">&#8250;</span> How Texas auto glass insurance claims work</li>
+        <li class="flex gap-2"><span style="color: #1e3a8a;">&#8250;</span> Does filing a glass claim raise my rates?</li>
+        <li class="flex gap-2"><span style="color: #1e3a8a;">&#8250;</span> ADAS recalibration: what it is and why it matters</li>
+        <li class="flex gap-2"><span style="color: #1e3a8a;">&#8250;</span> Why West Texas is so hard on windshields</li>
+        <li class="flex gap-2"><span style="color: #1e3a8a;">&#8250;</span> OEM vs. aftermarket glass — what's the real difference?</li>
+        <li class="flex gap-2"><span style="color: #1e3a8a;">&#8250;</span> Safe drive-away times after windshield replacement</li>
+      </ul>
+    </div>
+
+    <div class="text-center py-10 mt-10 bg-blue-50 rounded-xl border border-blue-100">
+      <h2 class="text-2xl font-bold mb-3" style="color: #1e3a8a;">Need Help Right Now?</h2>
+      <p class="text-gray-600 mb-5 max-w-xl mx-auto">Don't wait for a blog post — call us and we'll answer your specific question in real time. Same-day service available across Lubbock.</p>
+      <CallButton label="Call (806) 450-8900 — Free Quote" size="lg" center={true} />
+    </div>
+
+  </main>
+
+  <Footer />
+</Layout>

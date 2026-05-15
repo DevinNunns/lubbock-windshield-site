@@ -1,0 +1,131 @@
+---
+import Layout from '../layouts/Layout.astro';
+import Header from '../components/Header.astro';
+import Footer from '../components/Footer.astro';
+import CallButton from '../components/CallButton.astro';
+
+const siteUrl = 'https://windshieldreplacementlubbock.com';
+---
+
+<Layout
+  title="Windshield Insurance Claims Lubbock TX | We Handle It All"
+  description="We handle windshield insurance claims in Lubbock, TX for all major insurers. Chip repairs often free, replacements typically covered. Call (806) 450-8900."
+  canonical={`${siteUrl}/insurance-claims`}
+>
+  <Header />
+
+  <section style="background-color: #1e3a8a;" class="text-white py-12 px-4">
+    <div class="max-w-4xl mx-auto">
+      <h1 class="text-3xl sm:text-4xl font-bold mb-3">Windshield Insurance Claims — We Handle the Paperwork</h1>
+      <p class="text-blue-200 text-lg max-w-2xl">Don't deal with your insurance company alone. We contact them, file the claim, and bill directly — you just approve the service and we take it from there.</p>
+    </div>
+  </section>
+
+  <main class="max-w-4xl mx-auto px-4 py-12">
+
+    <div class="mb-10">
+      <CallButton label="Call Now — We Check Your Coverage: (806) 450-8900" size="md" />
+    </div>
+
+    <section class="mb-10">
+      <h2 class="text-2xl font-bold mb-4" style="color: #1e3a8a;">Your Windshield Might Already Be Paid For</h2>
+      <p class="text-gray-700 leading-relaxed mb-4">
+        Many Lubbock drivers are surprised to learn that their windshield replacement or chip repair is fully covered by their existing auto insurance — and that the process is far simpler than they expected. If you have comprehensive coverage (not just liability), windshield damage from hail, flying debris, gravel, or road hazards is almost always a covered event.
+      </p>
+      <p class="text-gray-700 leading-relaxed mb-4">
+        Even better: chip repairs are often covered with zero deductible. Insurance companies know that paying $50–$80 for a chip repair now prevents a $400–$600 full replacement claim later. Many policies in Texas specifically include glass coverage at no additional deductible.
+      </p>
+      <p class="text-gray-700 leading-relaxed">
+        The first thing we do when you call is ask about your insurance. We'll look up your coverage and tell you honestly what's covered and what, if anything, you'll owe. There's no pressure — we just want you to make an informed decision.
+      </p>
+    </section>
+
+    <section class="mb-10">
+      <h2 class="text-2xl font-bold mb-4" style="color: #1e3a8a;">Insurance Companies We Work With</h2>
+      <p class="text-gray-700 leading-relaxed mb-4">
+        We're a preferred provider or are accepted by all major insurance carriers. If your insurer isn't listed here, call us anyway — we work with virtually everyone:
+      </p>
+      <div class="grid grid-cols-2 sm:grid-cols-3 gap-3 mb-6">
+        {['State Farm', 'USAA', 'Allstate', 'Progressive', 'Geico', 'Farmers', 'Liberty Mutual', 'Nationwide', 'Travelers', 'AAA', 'Safeco', 'Erie'].map(ins => (
+          <div class="bg-gray-50 border border-gray-200 rounded px-4 py-2 text-sm font-medium text-gray-700">
+            {ins}
+          </div>
+        ))}
+      </div>
+      <p class="text-gray-600 text-sm">We also work with regional carriers and any insurer not listed above. The process is the same regardless of your carrier.</p>
+    </section>
+
+    <section class="mb-10">
+      <h2 class="text-2xl font-bold mb-4" style="color: #1e3a8a;">How the Insurance Process Works</h2>
+      <div class="space-y-5">
+        <div class="flex gap-4">
+          <div class="flex-shrink-0 w-8 h-8 rounded-full flex items-center justify-center text-white font-bold text-sm" style="background-color: #1e3a8a;">1</div>
+          <div>
+            <h3 class="font-bold mb-1">You call us with your insurance info</h3>
+            <p class="text-gray-700 text-sm leading-relaxed">Have your insurance card handy. We need your carrier, policy number, and your name as it appears on the policy. That's it.</p>
+          </div>
+        </div>
+        <div class="flex gap-4">
+          <div class="flex-shrink-0 w-8 h-8 rounded-full flex items-center justify-center text-white font-bold text-sm" style="background-color: #1e3a8a;">2</div>
+          <div>
+            <h3 class="font-bold mb-1">We contact your insurer</h3>
+            <p class="text-gray-700 text-sm leading-relaxed">We call your insurance company on your behalf, open the claim, and confirm coverage and any deductible that applies. You don't have to sit on hold or navigate the insurance company's phone system yourself.</p>
+          </div>
+        </div>
+        <div class="flex gap-4">
+          <div class="flex-shrink-0 w-8 h-8 rounded-full flex items-center justify-center text-white font-bold text-sm" style="background-color: #1e3a8a;">3</div>
+          <div>
+            <h3 class="font-bold mb-1">We tell you what you owe (usually nothing)</h3>
+            <p class="text-gray-700 text-sm leading-relaxed">Once we've confirmed coverage, we let you know the total cost and what portion, if any, is your deductible. For chip repairs, this is usually $0. For replacements, the deductible varies by policy — some are $0, others $100–$500.</p>
+          </div>
+        </div>
+        <div class="flex gap-4">
+          <div class="flex-shrink-0 w-8 h-8 rounded-full flex items-center justify-center text-white font-bold text-sm" style="background-color: #1e3a8a;">4</div>
+          <div>
+            <h3 class="font-bold mb-1">We complete the service</h3>
+            <p class="text-gray-700 text-sm leading-relaxed">Once you approve, we schedule and complete the repair or replacement. Same-day service is usually available.</p>
+          </div>
+        </div>
+        <div class="flex gap-4">
+          <div class="flex-shrink-0 w-8 h-8 rounded-full flex items-center justify-center text-white font-bold text-sm" style="background-color: #1e3a8a;">5</div>
+          <div>
+            <h3 class="font-bold mb-1">We bill your insurer directly</h3>
+            <p class="text-gray-700 text-sm leading-relaxed">You're not a middleman in the payment process. We invoice your insurance company directly, they pay us, and you're done. You only pay any applicable deductible portion, and only at time of service.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="mb-10 bg-gray-50 rounded-xl p-8">
+      <h2 class="text-2xl font-bold mb-4" style="color: #1e3a8a;">Will Filing a Claim Raise My Rates?</h2>
+      <p class="text-gray-700 leading-relaxed mb-4">
+        This is the most common concern we hear from Lubbock drivers. The answer, in nearly all cases: <strong>no</strong>. Comprehensive glass claims are generally classified as "not-at-fault" claims by insurers, meaning they don't count against you the way an at-fault accident would.
+      </p>
+      <p class="text-gray-700 leading-relaxed mb-4">
+        Windshield damage from hail, flying gravel, or road debris is considered an act of nature or a road hazard — something beyond your control. Most insurance companies do not raise rates for comprehensive glass claims. Some states have legislation specifically prohibiting rate increases for glass claims, and while Texas doesn't have such a law, the industry practice is to not penalize for these types of claims.
+      </p>
+      <p class="text-gray-700 leading-relaxed">
+        When in doubt, ask your insurance agent before filing. But in our experience working with Lubbock drivers, rate increases after windshield claims are extremely rare.
+      </p>
+    </section>
+
+    <section class="mb-10">
+      <h2 class="text-2xl font-bold mb-4" style="color: #1e3a8a;">What If I Don't Have Comprehensive Coverage?</h2>
+      <p class="text-gray-700 leading-relaxed mb-4">
+        Liability-only policies don't cover windshield damage — that's the tradeoff for the lower premium. If you don't have comprehensive, you'll pay out of pocket. The good news: we offer competitive cash prices and will give you an honest quote before we start. We don't inflate prices on cash customers.
+      </p>
+      <p class="text-gray-700 leading-relaxed">
+        If you're currently carrying liability-only and windshield damage is a concern (it should be in West Texas), it's worth talking to your insurance agent about adding comprehensive coverage. In many cases, adding comprehensive to a policy in Texas costs less than $10–$20 per month — and in a place with Lubbock's hail history, it tends to pay for itself quickly.
+      </p>
+    </section>
+
+    <div class="text-center py-10 bg-blue-50 rounded-xl border border-blue-100">
+      <h2 class="text-2xl font-bold mb-3" style="color: #1e3a8a;">Let Us Handle Your Insurance Claim</h2>
+      <p class="text-gray-600 mb-5 max-w-xl mx-auto">Call us with your insurance info and we'll take it from there. Most chip repairs and many replacements cost you nothing out of pocket.</p>
+      <CallButton label="Call (806) 450-8900 — Check My Coverage" size="lg" center={true} />
+    </div>
+
+  </main>
+
+  <Footer />
+</Layout>

@@ -1,0 +1,103 @@
+---
+import Layout from '../layouts/Layout.astro';
+import Header from '../components/Header.astro';
+import Footer from '../components/Footer.astro';
+import CallButton from '../components/CallButton.astro';
+
+const siteUrl = 'https://windshieldreplacementlubbock.com';
+
+const faqs = [
+  {
+    q: 'How long does a windshield replacement take?',
+    a: 'Most standard windshield replacements take 60 to 90 minutes from start to finish. After installation, you\'ll need to wait for the urethane adhesive to cure before driving — typically 1 hour for most jobs, though we\'ll give you a specific safe drive-away time based on your vehicle and the conditions. In West Texas summer heat, cure times can actually be faster than in cooler climates.'
+  },
+  {
+    q: 'Will my insurance cover windshield replacement?',
+    a: 'If you have comprehensive coverage, windshield damage from hail, flying gravel, debris, or other non-collision events is almost always covered. We\'ll verify your coverage when you call and tell you exactly what you\'ll owe before we start. Chip repairs are often covered with zero deductible — meaning the repair costs you nothing out of pocket.'
+  },
+  {
+    q: 'Will filing a windshield claim raise my insurance rates?',
+    a: 'In almost all cases, no. Comprehensive glass claims are categorized as not-at-fault events since windshield damage from hail or road debris is not your fault. Most insurance companies do not raise rates for these claims. We recommend confirming with your agent if you\'re concerned, but this is rarely an issue.'
+  },
+  {
+    q: 'Can you come to my location in Lubbock?',
+    a: 'Yes — our mobile service covers all of Lubbock and many surrounding communities including Wolfforth, Shallowater, Idalou, Ransom Canyon, Slaton, New Deal, and Abernathy. We come to your home, office, parking lot — wherever you are. Just call and confirm your location.'
+  },
+  {
+    q: 'Is windshield chip repair permanent?',
+    a: 'A properly done chip repair is a permanent fix that restores the structural integrity of the glass. The resin bonds permanently to the glass, stopping the damage from spreading and preventing further cracking. The chip site may still be faintly visible under certain light conditions, but the structural integrity is fully restored and the glass is safe to drive on.'
+  },
+  {
+    q: 'How do I know if my chip needs repair or full replacement?',
+    a: 'The general rule: if the damage is smaller than a dollar bill and not in the driver\'s direct line of sight, it\'s likely repairable. Larger cracks, edge cracks, or damage directly in front of the driver usually require full replacement. Call us and describe the damage — we\'ll give you an honest assessment over the phone in most cases.'
+  },
+  {
+    q: 'Do you work with USAA?',
+    a: 'Yes. USAA is one of the most common insurance carriers in Lubbock given the large military and veteran community in West Texas. We work with USAA regularly and are familiar with their claims process. We\'ll handle all contact with USAA on your behalf.'
+  },
+  {
+    q: 'My windshield has a camera or sensor — can you still replace it?',
+    a: 'Yes. Many modern vehicles have cameras, rain sensors, or other ADAS components mounted to or behind the windshield. We offer recalibration services after replacement to make sure your lane departure warnings, automatic emergency braking, adaptive cruise control, and other systems work correctly. Let us know your vehicle year, make, and model and we\'ll let you know what\'s involved.'
+  },
+  {
+    q: 'Can you replace my windshield the same day?',
+    a: 'Same-day service is available for most vehicles and most jobs in Lubbock. We stock glass for the most common vehicles in the area — F-150s, Silverados, RAMs, Tacomas, and common sedans and SUVs. Less common vehicles may require a short lead time to source the glass. Call early in the day for the best chance at same-day service.'
+  },
+  {
+    q: 'What happens if it rains right after my windshield is replaced?',
+    a: 'Light rain is usually fine after the safe drive-away period — the adhesive is waterproof once cured. However, we do recommend avoiding high-pressure car washes or pressure washing directly at the seal for at least 24 hours after installation to allow full cure. If a major storm is expected the same day as your replacement, let us know and we can discuss timing.'
+  },
+  {
+    q: 'Why are windshields so commonly damaged in Lubbock?',
+    a: 'Three main factors: hail (Lubbock is in Tornado Alley and sees some of the most active hail seasons in the country), agricultural traffic (farm and ranch trucks on Highway 87, Loop 289, and county roads constantly scatter gravel), and West Texas wind (which keeps debris in motion year-round). If you drive in Lubbock, windshield damage is practically inevitable over time.'
+  },
+  {
+    q: 'Do I have to be present during the mobile service appointment?',
+    a: 'Not necessarily. For a basic replacement, as long as the vehicle is accessible and unlocked, our technician can complete the job without you present. For ADAS recalibration, we may need the vehicle running or may need to perform a road test, which could require your presence or at minimum your keys. We\'ll coordinate this when scheduling.'
+  },
+  {
+    q: 'Do you offer a warranty on your work?',
+    a: 'Yes. Our installations are warranted against defects in workmanship — including leaks, improper fit, and installation issues. Glass warranty coverage varies; we\'ll explain the specific coverage that applies to your job when we quote you. In general, if something is wrong with our work, we\'ll make it right.'
+  },
+];
+---
+
+<Layout
+  title="Windshield Repair FAQ — Lubbock TX | Common Questions"
+  description="Answers to common questions about windshield replacement & repair in Lubbock, TX. Insurance, mobile service, timing, and more. Call (806) 450-8900."
+  canonical={`${siteUrl}/faq`}
+>
+  <Header />
+
+  <section style="background-color: #1e3a8a;" class="text-white py-12 px-4">
+    <div class="max-w-4xl mx-auto">
+      <h1 class="text-3xl sm:text-4xl font-bold mb-3">Frequently Asked Questions</h1>
+      <p class="text-blue-200 text-lg max-w-2xl">Answers to the questions Lubbock drivers ask us most often about windshield repair, replacement, insurance, and mobile service.</p>
+    </div>
+  </section>
+
+  <main class="max-w-4xl mx-auto px-4 py-12">
+
+    <div class="mb-10">
+      <CallButton label="Still Have Questions? Call (806) 450-8900" size="md" />
+    </div>
+
+    <section class="mb-12 space-y-6">
+      {faqs.map((faq, i) => (
+        <div class="border border-gray-200 rounded-lg p-6">
+          <h2 class="font-bold text-lg mb-3" style="color: #1e3a8a;">{faq.q}</h2>
+          <p class="text-gray-700 leading-relaxed">{faq.a}</p>
+        </div>
+      ))}
+    </section>
+
+    <div class="text-center py-10 bg-blue-50 rounded-xl border border-blue-100">
+      <h2 class="text-2xl font-bold mb-3" style="color: #1e3a8a;">Still Have Questions?</h2>
+      <p class="text-gray-600 mb-5 max-w-xl mx-auto">The fastest way to get an answer is to call us. We'll assess your specific situation and give you a straight answer — no runaround.</p>
+      <CallButton label="Call (806) 450-8900 — We'll Answer" size="lg" center={true} />
+    </div>
+
+  </main>
+
+  <Footer />
+</Layout>

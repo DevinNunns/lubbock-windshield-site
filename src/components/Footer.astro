@@ -1,0 +1,53 @@
+---
+const phone = '(806) 450-8900';
+const telLink = 'tel:+18064508900';
+---
+
+<footer style="background-color: #1e3a8a;" class="text-white mt-16">
+  <div class="max-w-6xl mx-auto px-4 py-12 grid grid-cols-1 md:grid-cols-3 gap-10">
+    <div>
+      <h3 class="font-bold text-lg mb-3">Lubbock Windshield Replacement</h3>
+      <p class="text-blue-200 text-sm leading-relaxed">
+        Serving Lubbock and the surrounding West Texas area with fast, professional auto glass service. All insurance accepted.
+      </p>
+      <a
+        href={telLink}
+        style="background-color: #dc2626;"
+        class="inline-block mt-4 text-white font-bold px-5 py-3 rounded-lg hover:brightness-110 transition-all shadow"
+      >
+        {phone}
+      </a>
+    </div>
+    <div>
+      <h3 class="font-bold text-lg mb-3">Service Area</h3>
+      <p class="text-blue-200 text-sm leading-relaxed">
+        Lubbock, TX and surrounding communities including Wolfforth, Shallowater, Idalou, Ransom Canyon, Slaton, New Deal, and Abernathy.
+      </p>
+      <p class="text-blue-200 text-sm mt-3">
+        <strong class="text-white">Hours:</strong><br />
+        24/7 Emergency Service<br />
+        Same-Day Appointments Available
+      </p>
+    </div>
+    <div>
+      <h3 class="font-bold text-lg mb-3">Quick Links</h3>
+      <ul class="text-blue-200 text-sm space-y-1">
+        <li><a href="/" class="hover:text-white transition-colors">Home</a></li>
+        <li><a href="/services" class="hover:text-white transition-colors">All Services</a></li>
+        <li><a href="/windshield-replacement" class="hover:text-white transition-colors">Windshield Replacement</a></li>
+        <li><a href="/windshield-chip-repair" class="hover:text-white transition-colors">Chip &amp; Crack Repair</a></li>
+        <li><a href="/mobile-service" class="hover:text-white transition-colors">Mobile Service</a></li>
+        <li><a href="/insurance-claims" class="hover:text-white transition-colors">Insurance Claims</a></li>
+        <li><a href="/service-areas" class="hover:text-white transition-colors">Service Areas</a></li>
+        <li><a href="/faq" class="hover:text-white transition-colors">FAQ</a></li>
+        <li><a href="/about" class="hover:text-white transition-colors">About Us</a></li>
+        <li><a href="/contact" class="hover:text-white transition-colors">Contact</a></li>
+      </ul>
+    </div>
+  </div>
+  <div class="border-t border-blue-700">
+    <div class="max-w-6xl mx-auto px-4 py-4 text-center text-blue-300 text-xs">
+      &copy; {new Date().getFullYear()} Lubbock Windshield Replacement &mdash; Lubbock, TX &mdash; <a href={telLink} class="hover:text-white transition-colors">{phone}</a>
+    </div>
+  </div>
+</footer>

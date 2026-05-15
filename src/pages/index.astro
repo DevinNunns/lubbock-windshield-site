@@ -1,0 +1,139 @@
+---
+import Layout from '../layouts/Layout.astro';
+import Header from '../components/Header.astro';
+import Footer from '../components/Footer.astro';
+import CallButton from '../components/CallButton.astro';
+
+const siteUrl = 'https://windshieldreplacementlubbock.com';
+---
+
+<Layout
+  title="Windshield Replacement Lubbock TX | (806) 450-8900"
+  description="Fast windshield replacement in Lubbock, TX. Mobile service, all insurance accepted. Call (806) 450-8900 — same-day appointments available."
+  canonical={siteUrl}
+  includeJsonLd={true}
+>
+  <Header />
+
+  <!-- Hero -->
+  <section style="background-color: #1e3a8a;" class="text-white py-16 px-4">
+    <div class="max-w-4xl mx-auto text-center">
+      <h1 class="text-3xl sm:text-4xl md:text-5xl font-bold leading-tight mb-4">
+        Windshield Replacement in Lubbock, TX
+      </h1>
+      <p class="text-xl text-blue-200 mb-6 max-w-2xl mx-auto">
+        Fast, professional auto glass service — mobile or in-shop. We come to you anywhere in Lubbock. Most repairs free with insurance.
+      </p>
+      <CallButton label="Call Now: (806) 450-8900" size="lg" center={true} />
+      <p class="text-blue-300 text-sm mt-4">Available 24/7 &bull; Same-Day Service &bull; All Insurance Accepted</p>
+    </div>
+  </section>
+
+  <!-- Trust badges -->
+  <section class="border-b border-gray-200 py-6 px-4">
+    <div class="max-w-5xl mx-auto grid grid-cols-2 sm:grid-cols-4 gap-4 text-center text-sm font-medium text-gray-700">
+      <div class="flex flex-col items-center gap-1">
+        <span class="text-2xl">&#128736;</span>
+        <span>Same-Day Service</span>
+      </div>
+      <div class="flex flex-col items-center gap-1">
+        <span class="text-2xl">&#127960;</span>
+        <span>Mobile &amp; In-Shop</span>
+      </div>
+      <div class="flex flex-col items-center gap-1">
+        <span class="text-2xl">&#128196;</span>
+        <span>All Insurance Accepted</span>
+      </div>
+      <div class="flex flex-col items-center gap-1">
+        <span class="text-2xl">&#9200;</span>
+        <span>24/7 Emergency</span>
+      </div>
+    </div>
+  </section>
+
+  <!-- Main content -->
+  <main class="max-w-4xl mx-auto px-4 py-12">
+
+    <section class="mb-12">
+      <h2 class="text-2xl font-bold mb-4" style="color: #1e3a8a;">Lubbock's Trusted Windshield Replacement Shop</h2>
+      <p class="text-gray-700 leading-relaxed mb-4">
+        Living in West Texas means your windshield takes a beating. Between the dust storms that roll through off the Caprock, hail season that hammers Lubbock every spring, and the constant shower of gravel and debris kicked up by the big agricultural trucks running Highway 87 and Loop 289 — windshield damage is just part of life here. That's where we come in.
+      </p>
+      <p class="text-gray-700 leading-relaxed mb-4">
+        We specialize in windshield replacement in Lubbock and have been serving drivers across the South Plains for years. Whether you're dealing with a full crack from a hailstorm that rolled through the Tech Terrace neighborhood or a small chip from gravel on I-27, we handle it all — quickly, professionally, and at a price that won't blindside you.
+      </p>
+      <p class="text-gray-700 leading-relaxed mb-6">
+        We're mobile. That means we come to your home, your office, your dorm near Texas Tech, wherever you are. You don't have to rearrange your day around a shop visit. Most jobs take less than an hour, and we'll have you back on the road before you know it.
+      </p>
+      <CallButton label="Schedule Your Replacement — (806) 450-8900" size="md" />
+    </section>
+
+    <section class="mb-12">
+      <h2 class="text-2xl font-bold mb-6" style="color: #1e3a8a;">Our Services</h2>
+      <div class="grid grid-cols-1 sm:grid-cols-2 gap-6">
+        <a href="/windshield-replacement" class="block border border-gray-200 rounded-lg p-5 hover:shadow-md transition-shadow hover:border-blue-300">
+          <h3 class="font-bold text-lg mb-2" style="color: #1e3a8a;">Full Windshield Replacement</h3>
+          <p class="text-gray-600 text-sm">When a crack is too large to repair or damage obstructs your vision, we replace the whole windshield with OEM or OEM-equivalent glass. Most vehicles done in under an hour.</p>
+        </a>
+        <a href="/windshield-chip-repair" class="block border border-gray-200 rounded-lg p-5 hover:shadow-md transition-shadow hover:border-blue-300">
+          <h3 class="font-bold text-lg mb-2" style="color: #1e3a8a;">Chip &amp; Crack Repair</h3>
+          <p class="text-gray-600 text-sm">Got a small chip or bullseye crack? Don't wait — chips spread quickly in West Texas heat. We can often fix chips in 30 minutes, and most repairs are free with insurance.</p>
+        </a>
+        <a href="/mobile-service" class="block border border-gray-200 rounded-lg p-5 hover:shadow-md transition-shadow hover:border-blue-300">
+          <h3 class="font-bold text-lg mb-2" style="color: #1e3a8a;">Mobile Windshield Service</h3>
+          <p class="text-gray-600 text-sm">We come to you — your home, workplace, parking lot, or anywhere in Lubbock. No need to drive with a cracked windshield. Just call and we'll show up.</p>
+        </a>
+        <a href="/insurance-claims" class="block border border-gray-200 rounded-lg p-5 hover:shadow-md transition-shadow hover:border-blue-300">
+          <h3 class="font-bold text-lg mb-2" style="color: #1e3a8a;">Insurance Claims</h3>
+          <p class="text-gray-600 text-sm">We work directly with all major insurance carriers. We handle the paperwork and billing — you just say yes and we take care of the rest. No out-of-pocket in most cases.</p>
+        </a>
+      </div>
+    </section>
+
+    <section class="mb-12 bg-gray-50 rounded-xl p-8">
+      <h2 class="text-2xl font-bold mb-4" style="color: #1e3a8a;">Why Lubbock Drivers Choose Us</h2>
+      <ul class="space-y-3 text-gray-700">
+        <li class="flex gap-3"><span class="font-bold" style="color: #dc2626;">&#10003;</span> <span><strong>Fast response</strong> — we can typically be on-site within hours of your call, not days</span></li>
+        <li class="flex gap-3"><span class="font-bold" style="color: #dc2626;">&#10003;</span> <span><strong>All insurance accepted</strong> — USAA, State Farm, Allstate, Progressive, Geico, Farmers, and all others</span></li>
+        <li class="flex gap-3"><span class="font-bold" style="color: #dc2626;">&#10003;</span> <span><strong>OEM and OEM-equivalent glass</strong> — we use quality replacement glass that meets your vehicle's factory spec</span></li>
+        <li class="flex gap-3"><span class="font-bold" style="color: #dc2626;">&#10003;</span> <span><strong>Experienced with West Texas vehicles</strong> — from Texas Tech student cars to farm trucks and everything in between</span></li>
+        <li class="flex gap-3"><span class="font-bold" style="color: #dc2626;">&#10003;</span> <span><strong>ADAS recalibration available</strong> — if your vehicle has advanced driver assistance systems (cameras, sensors in the windshield), we handle proper recalibration</span></li>
+        <li class="flex gap-3"><span class="font-bold" style="color: #dc2626;">&#10003;</span> <span><strong>Competitive pricing</strong> — transparent, up-front quotes before we start</span></li>
+      </ul>
+    </section>
+
+    <section class="mb-12">
+      <h2 class="text-2xl font-bold mb-4" style="color: #1e3a8a;">West Texas Weather and Your Windshield</h2>
+      <p class="text-gray-700 leading-relaxed mb-4">
+        Lubbock sits squarely in one of the most windshield-unfriendly environments in the country. Spring hailstorms are practically a tradition — the kind of hail that dents hoods and shatters glass. Severe thunderstorm season runs from roughly April through June, and many Lubbock residents have watched a perfect windshield turn into a spider-web of cracks during a single afternoon storm.
+      </p>
+      <p class="text-gray-700 leading-relaxed mb-4">
+        Then there's the dust. West Texas dust storms — haboobs that roll in off the open plains — carry fine sand and grit that acts like sandpaper against your glass over time. And the wind never really stops here. That wind keeps pushing debris across Loop 289, 50th Street, and 82nd Street, and all it takes is one stray rock to turn a routine commute into a windshield replacement call.
+      </p>
+      <p class="text-gray-700 leading-relaxed">
+        If you commute along I-27 or Highway 87 (Avenue Q) near the industrial areas and the airport, you know the aggravation of farm and ranch trucks kicking up gravel. College students driving up University Avenue to the Texas Tech campus deal with the same road hazards every day. We've seen it all — and we're ready to help.
+      </p>
+    </section>
+
+    <section class="mb-12">
+      <h2 class="text-2xl font-bold mb-4" style="color: #1e3a8a;">Areas We Serve</h2>
+      <p class="text-gray-700 leading-relaxed mb-4">
+        We serve all of Lubbock — from North Overton to South Overton, Tech Terrace to Maxey Park, Clapp Park to Arnett Benson. We also cover neighborhoods like Heart of Lubbock, Stubbs-Stewart, Bayless-Atkins, Wheelock, Monterey, and beyond.
+      </p>
+      <p class="text-gray-700 leading-relaxed mb-4">
+        Our mobile service reaches the surrounding towns too: Wolfforth, Shallowater, Idalou, Ransom Canyon, Slaton, New Deal, and Abernathy. If you're within 30 miles of Lubbock, give us a call.
+      </p>
+      <a href="/service-areas" class="font-semibold hover:underline" style="color: #1e3a8a;">See full service area list &rarr;</a>
+    </section>
+
+    <section class="mb-12 text-center py-10 bg-blue-50 rounded-xl border border-blue-100">
+      <h2 class="text-2xl font-bold mb-3" style="color: #1e3a8a;">Ready to Get Your Windshield Fixed?</h2>
+      <p class="text-gray-600 mb-6 max-w-xl mx-auto">One call is all it takes. We'll give you a free quote, check your insurance coverage, and schedule a time that works for you — often the same day.</p>
+      <CallButton label="Call (806) 450-8900 — Free Quote" size="lg" center={true} />
+      <p class="text-sm text-gray-500 mt-3">Available 24/7 for emergencies</p>
+    </section>
+
+  </main>
+
+  <Footer />
+</Layout>

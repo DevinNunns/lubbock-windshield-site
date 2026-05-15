@@ -1,0 +1,23 @@
+---
+interface Props {
+  label?: string;
+  size?: 'sm' | 'md' | 'lg';
+  center?: boolean;
+}
+const { label = 'Call Now: (806) 450-8900', size = 'md', center = false } = Astro.props;
+const sizeClasses = {
+  sm: 'px-4 py-2 text-base',
+  md: 'px-6 py-3 text-lg',
+  lg: 'px-8 py-4 text-xl',
+};
+---
+
+<div class={center ? 'text-center' : ''}>
+  <a
+    href="tel:+18064508900"
+    style="background-color: #dc2626;"
+    class={`inline-block text-white font-bold rounded-lg hover:brightness-110 transition-all shadow-lg ${sizeClasses[size]}`}
+  >
+    {label}
+  </a>
+</div>

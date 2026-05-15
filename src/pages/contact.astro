@@ -1,0 +1,140 @@
+---
+import Layout from '../layouts/Layout.astro';
+import Header from '../components/Header.astro';
+import Footer from '../components/Footer.astro';
+import CallButton from '../components/CallButton.astro';
+
+const siteUrl = 'https://windshieldreplacementlubbock.com';
+---
+
+<Layout
+  title="Contact Us | Lubbock Windshield Replacement (806) 450-8900"
+  description="Contact Lubbock Windshield Replacement for fast service. Call or text (806) 450-8900 — available 24/7 for emergencies. Serving all of Lubbock, TX."
+  canonical={`${siteUrl}/contact`}
+>
+  <Header />
+
+  <section style="background-color: #1e3a8a;" class="text-white py-12 px-4">
+    <div class="max-w-4xl mx-auto">
+      <h1 class="text-3xl sm:text-4xl font-bold mb-3">Contact Us</h1>
+      <p class="text-blue-200 text-lg max-w-2xl">The fastest way to reach us is a phone call. We answer quickly, give straight answers, and can often schedule same-day service.</p>
+    </div>
+  </section>
+
+  <main class="max-w-4xl mx-auto px-4 py-12">
+
+    <div class="grid grid-cols-1 md:grid-cols-2 gap-10 mb-12">
+
+      <div>
+        <h2 class="text-2xl font-bold mb-6" style="color: #1e3a8a;">Get in Touch</h2>
+
+        <div class="space-y-6">
+          <div class="flex gap-4 items-start">
+            <div class="w-10 h-10 rounded-full flex items-center justify-center text-white flex-shrink-0" style="background-color: #dc2626;">
+              <span class="text-lg">&#128222;</span>
+            </div>
+            <div>
+              <div class="font-bold mb-1">Phone / Text</div>
+              <a href="tel:+18064508900" class="text-xl font-bold hover:underline" style="color: #1e3a8a;">(806) 450-8900</a>
+              <p class="text-gray-600 text-sm mt-1">Available 24/7 for emergencies. Same-day appointments most days.</p>
+            </div>
+          </div>
+
+          <div class="flex gap-4 items-start">
+            <div class="w-10 h-10 rounded-full flex items-center justify-center text-white flex-shrink-0" style="background-color: #1e3a8a;">
+              <span class="text-lg">&#127968;</span>
+            </div>
+            <div>
+              <div class="font-bold mb-1">Service Area</div>
+              <p class="text-gray-700 text-sm">All of Lubbock, TX and surrounding communities including Wolfforth, Shallowater, Idalou, Ransom Canyon, Slaton, New Deal, and Abernathy.</p>
+            </div>
+          </div>
+
+          <div class="flex gap-4 items-start">
+            <div class="w-10 h-10 rounded-full flex items-center justify-center text-white flex-shrink-0" style="background-color: #1e3a8a;">
+              <span class="text-lg">&#9200;</span>
+            </div>
+            <div>
+              <div class="font-bold mb-1">Hours</div>
+              <div class="text-gray-700 text-sm space-y-1">
+                <div>Mon–Fri: 7:00 AM – 7:00 PM (standard service)</div>
+                <div>Sat–Sun: 8:00 AM – 5:00 PM (standard service)</div>
+                <div class="font-semibold" style="color: #dc2626;">24/7 emergency service available — call any time</div>
+              </div>
+            </div>
+          </div>
+
+          <div class="flex gap-4 items-start">
+            <div class="w-10 h-10 rounded-full flex items-center justify-center text-white flex-shrink-0" style="background-color: #1e3a8a;">
+              <span class="text-lg">&#128196;</span>
+            </div>
+            <div>
+              <div class="font-bold mb-1">Insurance</div>
+              <p class="text-gray-700 text-sm">All major insurance accepted. We handle the claim — you just call us with your policy info and we take it from there.</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="mt-8">
+          <CallButton label="Call Now: (806) 450-8900" size="lg" />
+        </div>
+      </div>
+
+      <div>
+        <h2 class="text-2xl font-bold mb-6" style="color: #1e3a8a;">What to Have Ready When You Call</h2>
+        <p class="text-gray-700 leading-relaxed mb-4">
+          To give you the fastest service possible, have this information ready when you call:
+        </p>
+        <ul class="space-y-3 text-gray-700">
+          <li class="flex gap-3">
+            <span class="font-bold" style="color: #dc2626;">1.</span>
+            <span><strong>Your vehicle's year, make, and model</strong> — we use this to look up the correct glass and confirm we have it in stock.</span>
+          </li>
+          <li class="flex gap-3">
+            <span class="font-bold" style="color: #dc2626;">2.</span>
+            <span><strong>Description of the damage</strong> — where on the windshield, roughly how big, what type (chip, crack, star break, etc.).</span>
+          </li>
+          <li class="flex gap-3">
+            <span class="font-bold" style="color: #dc2626;">3.</span>
+            <span><strong>Your insurance information</strong> (if applicable) — carrier name and your policy number. We'll handle the claim from there.</span>
+          </li>
+          <li class="flex gap-3">
+            <span class="font-bold" style="color: #dc2626;">4.</span>
+            <span><strong>Your location in Lubbock</strong> — neighborhood or address for mobile service scheduling.</span>
+          </li>
+          <li class="flex gap-3">
+            <span class="font-bold" style="color: #dc2626;">5.</span>
+            <span><strong>Your availability</strong> — when works best for you. We'll do our best to accommodate same-day requests.</span>
+          </li>
+        </ul>
+
+        <div class="mt-8 p-5 bg-gray-50 border border-gray-200 rounded-lg">
+          <h3 class="font-bold mb-2" style="color: #1e3a8a;">After a Hailstorm?</h3>
+          <p class="text-gray-700 text-sm leading-relaxed">
+            If a hailstorm just rolled through Lubbock and you're one of many people calling for service, call us right away and get on the schedule. Hail events create high demand and appointments fill up fast. The earlier you call, the sooner we can get to you.
+          </p>
+        </div>
+      </div>
+
+    </div>
+
+    <section class="mb-12">
+      <h2 class="text-2xl font-bold mb-4" style="color: #1e3a8a;">Serving These Lubbock Areas &amp; More</h2>
+      <div class="grid grid-cols-2 sm:grid-cols-4 gap-3 text-sm text-gray-700">
+        {['Tech Terrace', 'Heart of Lubbock', 'Maxey Park', 'South Overton', 'North Overton', 'Arnett Benson', 'Clapp Park', 'Stubbs-Stewart', 'Bayless-Atkins', 'Wheelock & Monterey', 'Wolfforth', 'Shallowater', 'Idalou', 'Ransom Canyon', 'Slaton', 'New Deal'].map(area => (
+          <div class="bg-gray-50 rounded px-3 py-2 border border-gray-200">{area}</div>
+        ))}
+      </div>
+    </section>
+
+    <div class="text-center py-10 bg-blue-50 rounded-xl border border-blue-100">
+      <h2 class="text-2xl font-bold mb-3" style="color: #1e3a8a;">Don't Wait — Call Now</h2>
+      <p class="text-gray-600 mb-5 max-w-xl mx-auto">Windshield chips spread. Cracks get worse. The sooner you call, the more likely a simple repair will solve the problem — and often it's free with insurance.</p>
+      <CallButton label="Call (806) 450-8900 Now" size="lg" center={true} />
+      <p class="text-sm text-gray-500 mt-3">24/7 emergency line &bull; Same-day appointments &bull; All insurance accepted</p>
+    </div>
+
+  </main>
+
+  <Footer />
+</Layout>

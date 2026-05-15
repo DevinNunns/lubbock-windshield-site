@@ -1,0 +1,39 @@
+---
+import Layout from '../layouts/Layout.astro';
+import Header from '../components/Header.astro';
+import Footer from '../components/Footer.astro';
+import CallButton from '../components/CallButton.astro';
+
+const siteUrl = 'https://windshieldreplacementlubbock.com';
+---
+
+<Layout
+  title="Page Not Found | Lubbock Windshield Replacement"
+  description="The page you were looking for wasn't found. Call (806) 450-8900 for windshield replacement in Lubbock, TX."
+  canonical={siteUrl}
+>
+  <Header />
+
+  <main class="max-w-2xl mx-auto px-4 py-20 text-center">
+    <div class="text-7xl mb-6">&#128683;</div>
+    <h1 class="text-4xl font-bold mb-4" style="color: #1e3a8a;">Page Not Found</h1>
+    <p class="text-gray-600 text-lg mb-8">
+      Looks like this page took a wrong turn somewhere on Loop 289. The page you're looking for doesn't exist or may have moved.
+    </p>
+    <div class="flex flex-col sm:flex-row gap-4 justify-center">
+      <a
+        href="/"
+        style="background-color: #1e3a8a;"
+        class="inline-block text-white font-bold px-8 py-4 rounded-lg hover:brightness-110 transition-all shadow-lg text-lg"
+      >
+        Go Back Home
+      </a>
+      <CallButton label="Call (806) 450-8900" size="lg" />
+    </div>
+    <p class="text-gray-500 text-sm mt-8">
+      Need windshield replacement or repair in Lubbock? We're one call away — <a href="tel:+18064508900" class="font-semibold hover:underline" style="color: #1e3a8a;">(806) 450-8900</a>
+    </p>
+  </main>
+
+  <Footer />
+</Layout>
