@@ -6,6 +6,7 @@ import sitemap from '@astrojs/sitemap';
 
 export default defineConfig({
   site: 'https://windshieldreplacementlubbock.com',
+  trailingSlash: 'always',
   vite: {
     plugins: [tailwindcss()]
   },
