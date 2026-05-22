@@ -12,6 +12,73 @@ const siteUrl = 'https://windshieldreplacementlubbock.com';
   description="Professional windshield replacement in Lubbock, TX. OEM-quality glass, mobile service, all insurance accepted. Call (806) 450-8900 today."
   canonical={`${siteUrl}/windshield-replacement/`}
 >
+  <script slot="head" type="application/ld+json" set:html={JSON.stringify({
+    "@context": "https://schema.org",
+    "@type": "Service",
+    "name": "Windshield Replacement in Lubbock, TX",
+    "serviceType": "Windshield Replacement",
+    "description": "Professional full windshield replacement in Lubbock, TX. OEM-equivalent glass, mobile service available, all insurance accepted. Same-day service.",
+    "url": `${siteUrl}/windshield-replacement/`,
+    "provider": {
+      "@type": "AutoGlassRepair",
+      "name": "Lubbock Windshield Replacement",
+      "telephone": "+18064508900",
+      "url": siteUrl
+    },
+    "areaServed": {"@type": "City", "name": "Lubbock", "sameAs": "https://en.wikipedia.org/wiki/Lubbock,_Texas"},
+    "availableChannel": {
+      "@type": "ServiceChannel",
+      "serviceUrl": `${siteUrl}/windshield-replacement/`,
+      "servicePhone": "+18064508900",
+      "availableLanguage": "English"
+    }
+  })} />
+  <script slot="head" type="application/ld+json" set:html={JSON.stringify({
+    "@context": "https://schema.org",
+    "@type": "HowTo",
+    "name": "How Windshield Replacement Works",
+    "description": "Our 5-step windshield replacement process in Lubbock, TX",
+    "step": [
+      {
+        "@type": "HowToStep",
+        "position": 1,
+        "name": "Free Assessment & Quote",
+        "text": "Call us or describe the damage when you call. We give you a price up front — no surprises."
+      },
+      {
+        "@type": "HowToStep",
+        "position": 2,
+        "name": "Insurance Verification",
+        "text": "We check your coverage and handle the claim. Most comprehensive policies cover full windshield replacement with no out-of-pocket cost."
+      },
+      {
+        "@type": "HowToStep",
+        "position": 3,
+        "name": "Glass Sourcing",
+        "text": "We stock glass for the most common vehicles in the Lubbock area — F-150s, Silverados, RAMs, Tacomas, common sedans and SUVs."
+      },
+      {
+        "@type": "HowToStep",
+        "position": 4,
+        "name": "Professional Installation",
+        "text": "The old windshield is carefully removed. We clean and prime the frame, apply high-strength urethane adhesive, and set the new glass precisely."
+      },
+      {
+        "@type": "HowToStep",
+        "position": 5,
+        "name": "Safe Drive-Away",
+        "text": "We give you your safe drive-away time — typically 1 hour for most modern adhesives. In West Texas summer heat, cure times can be faster."
+      }
+    ]
+  })} />
+  <script slot="head" type="application/ld+json" set:html={JSON.stringify({
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    "itemListElement": [
+      {"@type": "ListItem", "position": 1, "name": "Home", "item": `${siteUrl}/`},
+      {"@type": "ListItem", "position": 2, "name": "Windshield Replacement", "item": `${siteUrl}/windshield-replacement/`}
+    ]
+  })} />
   <Header />
 
   <section style="background-color: #1e3a8a;" class="text-white py-12 px-4">

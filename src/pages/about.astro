@@ -12,6 +12,14 @@ const siteUrl = 'https://windshieldreplacementlubbock.com';
   description="Learn about Lubbock Windshield Replacement — a local auto glass service trusted by Lubbock, TX drivers. Call (806) 450-8900 for same-day service."
   canonical={`${siteUrl}/about/`}
 >
+  <script slot="head" type="application/ld+json" set:html={JSON.stringify({
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    "itemListElement": [
+      {"@type": "ListItem", "position": 1, "name": "Home", "item": `${siteUrl}/`},
+      {"@type": "ListItem", "position": 2, "name": "About", "item": `${siteUrl}/about/`}
+    ]
+  })} />
   <Header />
 
   <section style="background-color: #1e3a8a;" class="text-white py-12 px-4">

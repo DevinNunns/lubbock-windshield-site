@@ -30,7 +30,6 @@ const jsonLd = {
   "@context": "https://schema.org",
   "@type": "AutoGlassRepair",
   "name": "Lubbock Windshield Replacement",
-  "image": `${siteUrl}/og-image.jpg`,
   "telephone": "+18064508900",
   "url": siteUrl,
   "address": {
@@ -40,19 +39,67 @@ const jsonLd = {
     "postalCode": "79401",
     "addressCountry": "US"
   },
+  "geo": {
+    "@type": "GeoCoordinates",
+    "latitude": 33.5779,
+    "longitude": -101.8552
+  },
   "areaServed": [
-    {"@type": "City", "name": "Lubbock"},
+    {"@type": "City", "name": "Lubbock", "sameAs": "https://en.wikipedia.org/wiki/Lubbock,_Texas"},
     {"@type": "City", "name": "Wolfforth"},
     {"@type": "City", "name": "Shallowater"},
     {"@type": "City", "name": "Idalou"},
-    {"@type": "City", "name": "Slaton"}
+    {"@type": "City", "name": "Ransom Canyon"},
+    {"@type": "City", "name": "Slaton"},
+    {"@type": "City", "name": "New Deal"},
+    {"@type": "City", "name": "Abernathy"}
   ],
-  "priceRange": "$",
+  "priceRange": "$$",
+  "currenciesAccepted": "USD",
+  "paymentAccepted": "Cash, Credit Card, Insurance",
   "openingHoursSpecification": {
     "@type": "OpeningHoursSpecification",
     "dayOfWeek": ["Monday","Tuesday","Wednesday","Thursday","Friday","Saturday","Sunday"],
     "opens": "00:00",
     "closes": "23:59"
+  },
+  "hasOfferCatalog": {
+    "@type": "OfferCatalog",
+    "name": "Auto Glass Services",
+    "itemListElement": [
+      {
+        "@type": "Offer",
+        "itemOffered": {
+          "@type": "Service",
+          "name": "Windshield Replacement",
+          "url": `${siteUrl}/windshield-replacement/`
+        }
+      },
+      {
+        "@type": "Offer",
+        "itemOffered": {
+          "@type": "Service",
+          "name": "Windshield Chip & Crack Repair",
+          "url": `${siteUrl}/windshield-chip-repair/`
+        }
+      },
+      {
+        "@type": "Offer",
+        "itemOffered": {
+          "@type": "Service",
+          "name": "Mobile Windshield Service",
+          "url": `${siteUrl}/mobile-service/`
+        }
+      },
+      {
+        "@type": "Offer",
+        "itemOffered": {
+          "@type": "Service",
+          "name": "Insurance Claims Processing",
+          "url": `${siteUrl}/insurance-claims/`
+        }
+      }
+    ]
   }
 };
 ---
@@ -75,6 +122,7 @@ const jsonLd = {
     {includeJsonLd && (
       <script type="application/ld+json" set:html={JSON.stringify(jsonLd)} />
     )}
+    <slot name="head" />
   </head>
   <body class="bg-white text-gray-900 font-sans">
     <slot />

@@ -13,6 +13,18 @@ const siteUrl = 'https://windshieldreplacementlubbock.com';
   canonical={siteUrl}
   includeJsonLd={true}
 >
+  <script slot="head" type="application/ld+json" set:html={JSON.stringify({
+    "@context": "https://schema.org",
+    "@type": "WebSite",
+    "name": "Lubbock Windshield Replacement",
+    "url": "https://windshieldreplacementlubbock.com",
+    "description": "Fast windshield replacement and chip repair in Lubbock, TX. Mobile service, all insurance accepted.",
+    "potentialAction": {
+      "@type": "SearchAction",
+      "target": "https://windshieldreplacementlubbock.com/?s={search_term_string}",
+      "query-input": "required name=search_term_string"
+    }
+  })} />
   <Header />
 
   <!-- Hero -->

@@ -12,6 +12,80 @@ const siteUrl = 'https://windshieldreplacementlubbock.com';
   description="Mobile windshield replacement & repair service in Lubbock, TX. We come to your home, office, or anywhere. Call (806) 450-8900 for same-day service."
   canonical={`${siteUrl}/mobile-service/`}
 >
+  <script slot="head" type="application/ld+json" set:html={JSON.stringify({
+    "@context": "https://schema.org",
+    "@type": "Service",
+    "name": "Mobile Windshield Service in Lubbock, TX",
+    "serviceType": "Mobile Auto Glass Repair",
+    "description": "We bring the shop to you. Full windshield replacement and chip repair done at your location anywhere in Lubbock — home, office, parking lot. Same-day available.",
+    "url": `${siteUrl}/mobile-service/`,
+    "provider": {
+      "@type": "AutoGlassRepair",
+      "name": "Lubbock Windshield Replacement",
+      "telephone": "+18064508900",
+      "url": siteUrl
+    },
+    "areaServed": [
+      {"@type": "City", "name": "Lubbock", "sameAs": "https://en.wikipedia.org/wiki/Lubbock,_Texas"},
+      {"@type": "City", "name": "Wolfforth"},
+      {"@type": "City", "name": "Shallowater"},
+      {"@type": "City", "name": "Idalou"},
+      {"@type": "City", "name": "Ransom Canyon"},
+      {"@type": "City", "name": "Slaton"}
+    ],
+    "availableChannel": {
+      "@type": "ServiceChannel",
+      "serviceUrl": `${siteUrl}/mobile-service/`,
+      "servicePhone": "+18064508900",
+      "availableLanguage": "English"
+    }
+  })} />
+  <script slot="head" type="application/ld+json" set:html={JSON.stringify({
+    "@context": "https://schema.org",
+    "@type": "HowTo",
+    "name": "How Our Mobile Windshield Service Works",
+    "description": "5 steps to getting your windshield replaced at your location in Lubbock, TX",
+    "step": [
+      {
+        "@type": "HowToStep",
+        "position": 1,
+        "name": "Call Us",
+        "text": "Describe your vehicle and the damage. We give you a quote and check your insurance coverage on the spot."
+      },
+      {
+        "@type": "HowToStep",
+        "position": 2,
+        "name": "Schedule a Time",
+        "text": "We schedule a time that works for you — same-day whenever possible. We'll confirm your location."
+      },
+      {
+        "@type": "HowToStep",
+        "position": 3,
+        "name": "Tech Arrives",
+        "text": "Our technician arrives with all equipment and your replacement glass. We'll text or call when we're on the way."
+      },
+      {
+        "@type": "HowToStep",
+        "position": 4,
+        "name": "Job Completed",
+        "text": "Usually 60–90 minutes for a replacement, 30 minutes or less for a chip repair. You don't need to be present."
+      },
+      {
+        "@type": "HowToStep",
+        "position": 5,
+        "name": "Done",
+        "text": "We give you safe drive-away instructions and clean up any glass debris from the area. Your day can continue as planned."
+      }
+    ]
+  })} />
+  <script slot="head" type="application/ld+json" set:html={JSON.stringify({
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    "itemListElement": [
+      {"@type": "ListItem", "position": 1, "name": "Home", "item": `${siteUrl}/`},
+      {"@type": "ListItem", "position": 2, "name": "Mobile Service", "item": `${siteUrl}/mobile-service/`}
+    ]
+  })} />
   <Header />
 
   <section style="background-color: #1e3a8a;" class="text-white py-12 px-4">

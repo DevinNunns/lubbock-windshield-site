@@ -12,6 +12,67 @@ const siteUrl = 'https://windshieldreplacementlubbock.com';
   description="We handle windshield insurance claims in Lubbock, TX for all major insurers. Chip repairs often free, replacements typically covered. Call (806) 450-8900."
   canonical={`${siteUrl}/insurance-claims/`}
 >
+  <script slot="head" type="application/ld+json" set:html={JSON.stringify({
+    "@context": "https://schema.org",
+    "@type": "Service",
+    "name": "Windshield Insurance Claims in Lubbock, TX",
+    "serviceType": "Auto Glass Insurance Claims Processing",
+    "description": "We handle the full windshield insurance claims process for Lubbock, TX drivers. We contact your insurer, file the claim, and bill directly — most repairs cost you nothing.",
+    "url": `${siteUrl}/insurance-claims/`,
+    "provider": {
+      "@type": "AutoGlassRepair",
+      "name": "Lubbock Windshield Replacement",
+      "telephone": "+18064508900",
+      "url": siteUrl
+    },
+    "areaServed": {"@type": "City", "name": "Lubbock", "sameAs": "https://en.wikipedia.org/wiki/Lubbock,_Texas"}
+  })} />
+  <script slot="head" type="application/ld+json" set:html={JSON.stringify({
+    "@context": "https://schema.org",
+    "@type": "HowTo",
+    "name": "How Windshield Insurance Claims Work",
+    "description": "Our 5-step process for handling windshield insurance claims in Lubbock, TX — we do it all for you",
+    "step": [
+      {
+        "@type": "HowToStep",
+        "position": 1,
+        "name": "You Call Us With Your Insurance Info",
+        "text": "Have your insurance card handy. We need your carrier, policy number, and your name as it appears on the policy."
+      },
+      {
+        "@type": "HowToStep",
+        "position": 2,
+        "name": "We Contact Your Insurer",
+        "text": "We call your insurance company on your behalf, open the claim, and confirm coverage and any deductible. You don't have to sit on hold yourself."
+      },
+      {
+        "@type": "HowToStep",
+        "position": 3,
+        "name": "We Tell You What You Owe",
+        "text": "Once coverage is confirmed, we let you know the total cost and what portion, if any, is your deductible. For chip repairs, this is usually $0."
+      },
+      {
+        "@type": "HowToStep",
+        "position": 4,
+        "name": "We Complete the Service",
+        "text": "Once you approve, we schedule and complete the repair or replacement. Same-day service is usually available."
+      },
+      {
+        "@type": "HowToStep",
+        "position": 5,
+        "name": "We Bill Your Insurer Directly",
+        "text": "We invoice your insurance company directly. You only pay any applicable deductible, and only at time of service."
+      }
+    ]
+  })} />
+  <script slot="head" type="application/ld+json" set:html={JSON.stringify({
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    "itemListElement": [
+      {"@type": "ListItem", "position": 1, "name": "Home", "item": `${siteUrl}/`},
+      {"@type": "ListItem", "position": 2, "name": "Insurance Claims", "item": `${siteUrl}/insurance-claims/`}
+    ]
+  })} />
   <Header />
 
   <section style="background-color: #1e3a8a;" class="text-white py-12 px-4">

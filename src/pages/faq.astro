@@ -67,6 +67,26 @@ const faqs = [
   description="Answers to common questions about windshield replacement & repair in Lubbock, TX. Insurance, mobile service, timing, and more. Call (806) 450-8900."
   canonical={`${siteUrl}/faq/`}
 >
+  <script slot="head" type="application/ld+json" set:html={JSON.stringify({
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "mainEntity": faqs.map(faq => ({
+      "@type": "Question",
+      "name": faq.q,
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": faq.a
+      }
+    }))
+  })} />
+  <script slot="head" type="application/ld+json" set:html={JSON.stringify({
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    "itemListElement": [
+      {"@type": "ListItem", "position": 1, "name": "Home", "item": `${siteUrl}/`},
+      {"@type": "ListItem", "position": 2, "name": "FAQ", "item": `${siteUrl}/faq/`}
+    ]
+  })} />
   <Header />
 
   <section style="background-color: #1e3a8a;" class="text-white py-12 px-4">

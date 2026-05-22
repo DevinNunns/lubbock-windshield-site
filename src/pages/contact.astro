@@ -12,6 +12,14 @@ const siteUrl = 'https://windshieldreplacementlubbock.com';
   description="Contact Lubbock Windshield Replacement for fast service. Call or text (806) 450-8900 — available 24/7 for emergencies. Serving all of Lubbock, TX."
   canonical={`${siteUrl}/contact/`}
 >
+  <script slot="head" type="application/ld+json" set:html={JSON.stringify({
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    "itemListElement": [
+      {"@type": "ListItem", "position": 1, "name": "Home", "item": `${siteUrl}/`},
+      {"@type": "ListItem", "position": 2, "name": "Contact", "item": `${siteUrl}/contact/`}
+    ]
+  })} />
   <Header />
 
   <section style="background-color: #1e3a8a;" class="text-white py-12 px-4">

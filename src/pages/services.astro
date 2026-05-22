@@ -12,6 +12,14 @@ const siteUrl = 'https://windshieldreplacementlubbock.com';
   description="Full windshield replacement, chip repair, mobile service & insurance claims in Lubbock, TX. Call (806) 450-8900 for a free quote today."
   canonical={`${siteUrl}/services/`}
 >
+  <script slot="head" type="application/ld+json" set:html={JSON.stringify({
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    "itemListElement": [
+      {"@type": "ListItem", "position": 1, "name": "Home", "item": `${siteUrl}/`},
+      {"@type": "ListItem", "position": 2, "name": "Services", "item": `${siteUrl}/services/`}
+    ]
+  })} />
   <Header />
 
   <section style="background-color: #1e3a8a;" class="text-white py-12 px-4">

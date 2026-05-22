@@ -12,6 +12,68 @@ const siteUrl = 'https://windshieldreplacementlubbock.com';
   description="Windshield chip & crack repair in Lubbock, TX. Most repairs free with comprehensive insurance. Fast 30-min service. Call (806) 450-8900."
   canonical={`${siteUrl}/windshield-chip-repair/`}
 >
+  <script slot="head" type="application/ld+json" set:html={JSON.stringify({
+    "@context": "https://schema.org",
+    "@type": "Service",
+    "name": "Windshield Chip & Crack Repair in Lubbock, TX",
+    "serviceType": "Windshield Chip Repair",
+    "description": "Fast windshield chip and crack repair in Lubbock, TX. Most repairs are completely free with comprehensive insurance. 30-minute service at your location.",
+    "url": `${siteUrl}/windshield-chip-repair/`,
+    "provider": {
+      "@type": "AutoGlassRepair",
+      "name": "Lubbock Windshield Replacement",
+      "telephone": "+18064508900",
+      "url": siteUrl
+    },
+    "areaServed": {"@type": "City", "name": "Lubbock", "sameAs": "https://en.wikipedia.org/wiki/Lubbock,_Texas"},
+    "availableChannel": {
+      "@type": "ServiceChannel",
+      "serviceUrl": `${siteUrl}/windshield-chip-repair/`,
+      "servicePhone": "+18064508900",
+      "availableLanguage": "English"
+    }
+  })} />
+  <script slot="head" type="application/ld+json" set:html={JSON.stringify({
+    "@context": "https://schema.org",
+    "@type": "HowTo",
+    "name": "How Windshield Chip Repair Works",
+    "description": "Our 4-step windshield chip and crack repair process",
+    "totalTime": "PT30M",
+    "step": [
+      {
+        "@type": "HowToStep",
+        "position": 1,
+        "name": "Clean & Prep the Damage",
+        "text": "We remove any loose glass particles and moisture from the chip. Moisture in the repair is the number-one cause of repair failure, so we take time here."
+      },
+      {
+        "@type": "HowToStep",
+        "position": 2,
+        "name": "Inject the Resin",
+        "text": "Using a specialized applicator, we force optically clear resin into the damage under vacuum pressure. The resin fills every crack and void in the damage."
+      },
+      {
+        "@type": "HowToStep",
+        "position": 3,
+        "name": "UV Cure",
+        "text": "We expose the resin to ultraviolet light — Lubbock sun is great for this — which hardens it to a solid, clear bond."
+      },
+      {
+        "@type": "HowToStep",
+        "position": 4,
+        "name": "Polish & Finish",
+        "text": "The surface is polished smooth. The result: restored structural integrity and significantly improved appearance."
+      }
+    ]
+  })} />
+  <script slot="head" type="application/ld+json" set:html={JSON.stringify({
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    "itemListElement": [
+      {"@type": "ListItem", "position": 1, "name": "Home", "item": `${siteUrl}/`},
+      {"@type": "ListItem", "position": 2, "name": "Windshield Chip Repair", "item": `${siteUrl}/windshield-chip-repair/`}
+    ]
+  })} />
   <Header />
 
   <section style="background-color: #1e3a8a;" class="text-white py-12 px-4">
