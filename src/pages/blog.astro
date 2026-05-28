@@ -3,6 +3,7 @@ import Layout from '../layouts/Layout.astro';
 import Header from '../components/Header.astro';
 import Footer from '../components/Footer.astro';
 import CallButton from '../components/CallButton.astro';
+import { sortedPosts } from '../data/posts';
 
 const siteUrl = 'https://windshieldreplacementlubbock.com';
 ---
@@ -28,25 +29,31 @@ const siteUrl = 'https://windshieldreplacementlubbock.com';
       <CallButton label="Call (806) 450-8900 — Same-Day Service" size="md" center={true} />
     </div>
 
-    <div class="text-center py-16 border-2 border-dashed border-gray-200 rounded-xl">
-      <div class="text-5xl mb-4">&#128221;</div>
-      <h2 class="text-xl font-bold mb-3 text-gray-700">Articles Coming Soon</h2>
-      <p class="text-gray-500 max-w-md mx-auto text-sm leading-relaxed">
-        We're working on helpful guides for Lubbock drivers — covering topics like how to handle hail season, when to repair vs. replace, how insurance glass claims work in Texas, and more. Check back soon.
-      </p>
+    <div class="space-y-6">
+      {sortedPosts.map((post) => (
+        <a href={`${siteUrl}/blog/${post.slug}/`} class="block group p-6 bg-white border border-gray-200 rounded-xl hover:border-blue-300 hover:shadow-md transition-all">
+          <p class="text-xs font-medium text-blue-600 uppercase tracking-wide mb-2">{post.category}</p>
+          <h2 class="text-xl font-bold text-gray-900 group-hover:text-blue-800 transition-colors mb-2">{post.title}</h2>
+          <p class="text-gray-600 text-sm leading-relaxed mb-3">{post.description}</p>
+          <div class="flex items-center justify-between">
+            <span style="color: #1e3a8a;" class="text-sm font-semibold group-hover:underline">Read article ›</span>
+            <span class="text-xs text-gray-400">{new Date(post.date).toLocaleDateString('en-US', { year: 'numeric', month: 'long', day: 'numeric' })}</span>
+          </div>
+        </a>
+      ))}
     </div>
 
     <div class="mt-12 bg-gray-50 rounded-xl p-8">
       <h2 class="text-xl font-bold mb-4" style="color: #1e3a8a;">Topics We'll Be Covering</h2>
       <ul class="grid grid-cols-1 sm:grid-cols-2 gap-3 text-gray-700 text-sm">
-        <li class="flex gap-2"><span style="color: #1e3a8a;">&#8250;</span> How to survive Lubbock hail season with your windshield intact</li>
-        <li class="flex gap-2"><span style="color: #1e3a8a;">&#8250;</span> Chip vs. crack: what can actually be repaired?</li>
-        <li class="flex gap-2"><span style="color: #1e3a8a;">&#8250;</span> How Texas auto glass insurance claims work</li>
-        <li class="flex gap-2"><span style="color: #1e3a8a;">&#8250;</span> Does filing a glass claim raise my rates?</li>
-        <li class="flex gap-2"><span style="color: #1e3a8a;">&#8250;</span> ADAS recalibration: what it is and why it matters</li>
-        <li class="flex gap-2"><span style="color: #1e3a8a;">&#8250;</span> Why West Texas is so hard on windshields</li>
-        <li class="flex gap-2"><span style="color: #1e3a8a;">&#8250;</span> OEM vs. aftermarket glass — what's the real difference?</li>
-        <li class="flex gap-2"><span style="color: #1e3a8a;">&#8250;</span> Safe drive-away times after windshield replacement</li>
+        <li class="flex gap-2"><span style="color: #1e3a8a;">›</span> How to survive Lubbock hail season with your windshield intact</li>
+        <li class="flex gap-2"><span style="color: #1e3a8a;">›</span> Chip vs. crack: what can actually be repaired?</li>
+        <li class="flex gap-2"><span style="color: #1e3a8a;">›</span> How Texas auto glass insurance claims work</li>
+        <li class="flex gap-2"><span style="color: #1e3a8a;">›</span> Does filing a glass claim raise my rates?</li>
+        <li class="flex gap-2"><span style="color: #1e3a8a;">›</span> ADAS recalibration: what it is and why it matters</li>
+        <li class="flex gap-2"><span style="color: #1e3a8a;">›</span> Why West Texas is so hard on windshields</li>
+        <li class="flex gap-2"><span style="color: #1e3a8a;">›</span> OEM vs. aftermarket glass — what's the real difference?</li>
+        <li class="flex gap-2"><span style="color: #1e3a8a;">›</span> Safe drive-away times after windshield replacement</li>
       </ul>
     </div>
 
